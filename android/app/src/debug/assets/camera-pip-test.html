@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body style="background: #111; color: white; font: 24px sans-serif">
+    <h1>Simulated camera test</h1>
+    <p>This is a local test pattern, not a Nanit camera.</p>
+    <video
+      autoplay
+      muted
+      playsinline
+      style="width: 75%; max-height: 70vh"
+    ></video>
+    <canvas width="1280" height="720" hidden></canvas>
+    <script>
+      const canvas = document.querySelector("canvas"),
+        ctx = canvas.getContext("2d");
+      let frame = 0;
+      function draw() {
+        ctx.fillStyle = "#163028";
+        ctx.fillRect(0, 0, 1280, 720);
+        ctx.fillStyle = "#ff6a2b";
+        ctx.fillRect((frame * 8) % 1100, 300, 180, 180);
+        ctx.fillStyle = "white";
+        ctx.font = "48px sans-serif";
+        ctx.fillText("SIMULATED CAMERA", 80, 120);
+        ctx.fillText("Frame " + frame++, 80, 200);
+        requestAnimationFrame(draw);
+      }
+      draw();
+      document.querySelector("video").srcObject = canvas.captureStream(20);
+    </script>
+  </body>
+</html>

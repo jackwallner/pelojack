@@ -1,0 +1,97 @@
+{
+  "id": "endurance-45",
+  "name": "45 min Endurance",
+  "description": "Steady aerobic blocks with short breaks.",
+  "category": "endurance",
+  "segments": [
+    {
+      "name": "Warm up",
+      "seconds": 300,
+      "resistance": [
+        28,
+        32
+      ],
+      "cadence": [
+        80,
+        90
+      ],
+      "cue": "Easy start"
+    },
+    {
+      "name": "Steady",
+      "seconds": 600,
+      "resistance": [
+        36,
+        40
+      ],
+      "cadence": [
+        85,
+        95
+      ],
+      "cue": "Conversational effort"
+    },
+    {
+      "name": "Recover",
+      "seconds": 120,
+      "resistance": [
+        28,
+        32
+      ],
+      "cadence": [
+        80,
+        90
+      ]
+    },
+    {
+      "name": "Steady",
+      "seconds": 600,
+      "resistance": [
+        38,
+        42
+      ],
+      "cadence": [
+        85,
+        95
+      ],
+      "cue": "Same feel, a little more load"
+    },
+    {
+      "name": "Recover",
+      "seconds": 120,
+      "resistance": [
+        28,
+        32
+      ],
+      "cadence": [
+        80,
+        90
+      ]
+    },
+    {
+      "name": "Steady",
+      "seconds": 660,
+      "resistance": [
+        38,
+        42
+      ],
+      "cadence": [
+        85,
+        95
+      ],
+      "cue": "Hold it together to the end"
+    },
+    {
+      "name": "Cool down",
+      "seconds": 300,
+      "resistance": [
+        25,
+        30
+      ],
+      "cadence": [
+        75,
+        85
+      ],
+      "cue": "Nice work"
+    }
+  ]
+}

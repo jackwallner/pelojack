@@ -1,0 +1,112 @@
+{
+  "id": "low-impact-20",
+  "name": "20 min Low Impact",
+  "description": "Steady, joint-friendly work with no big surges.",
+  "category": "low_impact",
+  "segments": [
+    {
+      "name": "Warm up",
+      "seconds": 180,
+      "resistance": [
+        25,
+        30
+      ],
+      "cadence": [
+        80,
+        90
+      ],
+      "cue": "Easy spin"
+    },
+    {
+      "name": "Steady",
+      "seconds": 180,
+      "resistance": [
+        30,
+        35
+      ],
+      "cadence": [
+        85,
+        95
+      ],
+      "cue": "Smooth circles"
+    },
+    {
+      "name": "Firm",
+      "seconds": 120,
+      "resistance": [
+        35,
+        40
+      ],
+      "cadence": [
+        80,
+        90
+      ],
+      "cue": "A touch more load, same calm breathing"
+    },
+    {
+      "name": "Steady",
+      "seconds": 180,
+      "resistance": [
+        30,
+        35
+      ],
+      "cadence": [
+        85,
+        95
+      ],
+      "cue": "Smooth circles"
+    },
+    {
+      "name": "Firm",
+      "seconds": 120,
+      "resistance": [
+        35,
+        40
+      ],
+      "cadence": [
+        80,
+        90
+      ],
+      "cue": "A touch more load, same calm breathing"
+    },
+    {
+      "name": "Steady",
+      "seconds": 180,
+      "resistance": [
+        30,
+        35
+      ],
+      "cadence": [
+        85,
+        95
+      ],
+      "cue": "Smooth circles"
+    },
+    {
+      "name": "Firm",
+      "seconds": 120,
+      "resistance": [
+        35,
+        40
+      ],
+      "cadence": [
+        80,
+        90
+      ],
+      "cue": "A touch more load, same calm breathing"
+    },
+    {
+      "name": "Cool down",
+      "seconds": 120,
+      "resistance": [
+        20,
+        25
+      ],
+      "cadence": [
+        75,
+        85
+      ],
+      "cue": "Ease off"
+    }
+  ]
+}

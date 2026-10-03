@@ -1,0 +1,158 @@
+{
+  "id": "pz-max-30",
+  "name": "30 min Power Zone Max",
+  "description": "Short, very hard efforts in zones 6 and 7.",
+  "category": "power_zone",
+  "segments": [
+    {
+      "name": "Warm up",
+      "seconds": 240,
+      "cadence": [
+        80,
+        90
+      ],
+      "zone": 1
+    },
+    {
+      "name": "Zone 2",
+      "seconds": 120,
+      "cadence": [
+        85,
+        95
+      ],
+      "zone": 2
+    },
+    {
+      "name": "Zone 3",
+      "seconds": 60,
+      "cadence": [
+        85,
+        95
+      ],
+      "zone": 3
+    },
+    {
+      "name": "Zone 4",
+      "seconds": 60,
+      "cadence": [
+        85,
+        95
+      ],
+      "zone": 4
+    },
+    {
+      "name": "Zone 6",
+      "seconds": 60,
+      "cadence": [
+        95,
+        110
+      ],
+      "zone": 6,
+      "cue": "Anaerobic, go"
+    },
+    {
+      "name": "Recover",
+      "seconds": 120,
+      "cadence": [
+        80,
+        90
+      ],
+      "zone": 1
+    },
+    {
+      "name": "Zone 6",
+      "seconds": 60,
+      "cadence": [
+        95,
+        110
+      ],
+      "zone": 6,
+      "cue": "Anaerobic, go"
+    },
+    {
+      "name": "Recover",
+      "seconds": 120,
+      "cadence": [
+        80,
+        90
+      ],
+      "zone": 1
+    },
+    {
+      "name": "Zone 6",
+      "seconds": 60,
+      "cadence": [
+        95,
+        110
+      ],
+      "zone": 6,
+      "cue": "Anaerobic, go"
+    },
+    {
+      "name": "Recover",
+      "seconds": 120,
+      "cadence": [
+        80,
+        90
+      ],
+      "zone": 1
+    },
+    {
+      "name": "Zone 6",
+      "seconds": 60,
+      "cadence": [
+        95,
+        110
+      ],
+      "zone": 6,
+      "cue": "Anaerobic, go"
+    },
+    {
+      "name": "Recover",
+      "seconds": 120,
+      "cadence": [
+        80,
+        90
+      ],
+      "zone": 1
+    },
+    {
+      "name": "Zone 7",
+      "seconds": 60,
+      "cadence": [
+        100,
+        120
+      ],
+      "zone": 7,
+      "cue": "All out"
+    },
+    {
+      "name": "Recover",
+      "seconds": 120,
+      "cadence": [
+        80,
+        90
+      ],
+      "zone": 1
+    },
+    {
+      "name": "Zone 5",
+      "seconds": 180,
+      "cadence": [
+        90,
+        100
+      ],
+      "zone": 5,
+      "cue": "Finish strong"
+    },
+    {
+      "name": "Cool down",
+      "seconds": 240,
+      "cadence": [
+        80,
+        90
+      ],
+      "zone": 1
+    }
+  ]
+}

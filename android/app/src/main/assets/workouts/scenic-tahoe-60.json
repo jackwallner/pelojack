@@ -1,0 +1,165 @@
+{
+  "id": "scenic-tahoe-60",
+  "name": "60 min Lake Tahoe Flume Trail",
+  "description": "The Flume Trail above Lake Tahoe.",
+  "category": "scenic",
+  "video": {
+    "youtube": "nASNmmCDnyc"
+  },
+  "segments": [
+    {
+      "name": "Warm up",
+      "seconds": 300,
+      "resistance": [
+        28,
+        32
+      ],
+      "cadence": [
+        80,
+        90
+      ],
+      "cue": "Settle in and enjoy the view"
+    },
+    {
+      "name": "Rolling",
+      "seconds": 300,
+      "resistance": [
+        34,
+        38
+      ],
+      "cadence": [
+        80,
+        90
+      ],
+      "cue": "Steady and smooth"
+    },
+    {
+      "name": "Gentle rise",
+      "seconds": 300,
+      "resistance": [
+        38,
+        42
+      ],
+      "cadence": [
+        75,
+        85
+      ],
+      "cue": "Settle into the climb"
+    },
+    {
+      "name": "Rolling",
+      "seconds": 300,
+      "resistance": [
+        34,
+        38
+      ],
+      "cadence": [
+        80,
+        90
+      ]
+    },
+    {
+      "name": "Push a little",
+      "seconds": 300,
+      "resistance": [
+        40,
+        45
+      ],
+      "cadence": [
+        80,
+        90
+      ],
+      "cue": "A little harder, still conversational"
+    },
+    {
+      "name": "Rolling",
+      "seconds": 300,
+      "resistance": [
+        34,
+        38
+      ],
+      "cadence": [
+        80,
+        90
+      ],
+      "cue": "Steady and smooth"
+    },
+    {
+      "name": "Gentle rise",
+      "seconds": 300,
+      "resistance": [
+        38,
+        42
+      ],
+      "cadence": [
+        75,
+        85
+      ],
+      "cue": "Settle into the climb"
+    },
+    {
+      "name": "Rolling",
+      "seconds": 300,
+      "resistance": [
+        34,
+        38
+      ],
+      "cadence": [
+        80,
+        90
+      ]
+    },
+    {
+      "name": "Push a little",
+      "seconds": 300,
+      "resistance": [
+        40,
+        45
+      ],
+      "cadence": [
+        80,
+        90
+      ],
+      "cue": "A little harder, still conversational"
+    },
+    {
+      "name": "Rolling",
+      "seconds": 300,
+      "resistance": [
+        34,
+        38
+      ],
+      "cadence": [
+        80,
+        90
+      ],
+      "cue": "Steady and smooth"
+    },
+    {
+      "name": "Gentle rise",
+      "seconds": 300,
+      "resistance": [
+        38,
+        42
+      ],
+      "cadence": [
+        75,
+        85
+      ],
+      "cue": "Settle into the climb"
+    },
+    {
+      "name": "Cool down",
+      "seconds": 300,
+      "resistance": [
+        25,
+        30
+      ],
+      "cadence": [
+        75,
+        85
+      ],
+      "cue": "Coast it home"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "power-zone-builder",
+  "name": "Power Zone Builder",
+  "description": "Three weeks of zone training, bookended by FTP tests.",
+  "weeks": [
+    [
+      "ftp-test-30",
+      "pz-endurance-30",
+      "pz-30"
+    ],
+    [
+      "pz-endurance-45",
+      "pz-30",
+      "pz-max-30"
+    ],
+    [
+      "pz-endurance-45",
+      "pz-max-30",
+      "ftp-test-30"
+    ]
+  ]
+}

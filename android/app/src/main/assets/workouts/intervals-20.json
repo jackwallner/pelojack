@@ -1,0 +1,177 @@
+{
+  "id": "intervals-20",
+  "name": "20 min Intervals",
+  "description": "Six one-minute pushes with equal recovery.",
+  "category": "intervals",
+  "segments": [
+    {
+      "name": "Warm up",
+      "seconds": 240,
+      "resistance": [
+        28,
+        32
+      ],
+      "cadence": [
+        80,
+        90
+      ],
+      "cue": "Build slowly"
+    },
+    {
+      "name": "Push",
+      "seconds": 60,
+      "resistance": [
+        46,
+        50
+      ],
+      "cadence": [
+        90,
+        100
+      ],
+      "cue": "Hard but repeatable"
+    },
+    {
+      "name": "Recover",
+      "seconds": 60,
+      "resistance": [
+        30,
+        34
+      ],
+      "cadence": [
+        80,
+        90
+      ],
+      "cue": "Spin it out"
+    },
+    {
+      "name": "Push",
+      "seconds": 60,
+      "resistance": [
+        46,
+        50
+      ],
+      "cadence": [
+        90,
+        100
+      ],
+      "cue": "Hard but repeatable"
+    },
+    {
+      "name": "Recover",
+      "seconds": 60,
+      "resistance": [
+        30,
+        34
+      ],
+      "cadence": [
+        80,
+        90
+      ],
+      "cue": "Spin it out"
+    },
+    {
+      "name": "Push",
+      "seconds": 60,
+      "resistance": [
+        48,
+        52
+      ],
+      "cadence": [
+        90,
+        100
+      ],
+      "cue": "Hard but repeatable"
+    },
+    {
+      "name": "Recover",
+      "seconds": 60,
+      "resistance": [
+        30,
+        34
+      ],
+      "cadence": [
+        80,
+        90
+      ],
+      "cue": "Spin it out"
+    },
+    {
+      "name": "Push",
+      "seconds": 60,
+      "resistance": [
+        48,
+        52
+      ],
+      "cadence": [
+        90,
+        100
+      ],
+      "cue": "Hard but repeatable"
+    },
+    {
+      "name": "Recover",
+      "seconds": 60,
+      "resistance": [
+        30,
+        34
+      ],
+      "cadence": [
+        80,
+        90
+      ],
+      "cue": "Spin it out"
+    },
+    {
+      "name": "Push",
+      "seconds": 60,
+      "resistance": [
+        50,
+        54
+      ],
+      "cadence": [
+        90,
+        100
+      ],
+      "cue": "Hard but repeatable"
+    },
+    {
+      "name": "Recover",
+      "seconds": 60,
+      "resistance": [
+        30,
+        34
+      ],
+      "cadence": [
+        80,
+        90
+      ],
+      "cue": "Spin it out"
+    },
+    {
+      "name": "Push",
+      "seconds": 60,
+      "resistance": [
+        50,
+        54
+      ],
+      "cadence": [
+        90,
+        100
+      ],
+      "cue": "Hard but repeatable"
+    },
+    {
+      "name": "Cool down",
+      "seconds": 300,
+      "resistance": [
+        25,
+        30
+      ],
+      "cadence": [
+        75,
+        85
+      ],
+      "cue": "Well done"
+    }
+  ]
+}

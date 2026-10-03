@@ -1,0 +1,60 @@
+{
+  "id": "warm-up-5",
+  "name": "5 min Warm Up",
+  "description": "Loosen up before a harder ride.",
+  "category": "warm_up",
+  "segments": [
+    {
+      "name": "Easy spin",
+      "seconds": 60,
+      "resistance": [
+        25,
+        30
+      ],
+      "cadence": [
+        80,
+        90
+      ],
+      "cue": "Find your rhythm"
+    },
+    {
+      "name": "Build",
+      "seconds": 120,
+      "resistance": [
+        30,
+        35
+      ],
+      "cadence": [
+        85,
+        95
+      ],
+      "cue": "Add a little load"
+    },
+    {
+      "name": "Lift",
+      "seconds": 60,
+      "resistance": [
+        35,
+        40
+      ],
+      "cadence": [
+        90,
+        100
+      ],
+      "cue": "Quicken the legs"
+    },
+    {
+      "name": "Settle",
+      "seconds": 60,
+      "resistance": [
+        25,
+        30
+      ],
+      "cadence": [
+        80,
+        90
+      ],
+      "cue": "Back off and breathe"
+    }
+  ]
+}

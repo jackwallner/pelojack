@@ -1,0 +1,460 @@
+{
+  "id": "hiit-20",
+  "name": "20 min HIIT",
+  "description": "Two Tabata blocks: 20 seconds on, 10 off, eight times.",
+  "category": "hiit",
+  "segments": [
+    {
+      "name": "Warm up",
+      "seconds": 240,
+      "resistance": [
+        30,
+        35
+      ],
+      "cadence": [
+        85,
+        95
+      ],
+      "cue": "Get the legs moving"
+    },
+    {
+      "name": "Build",
+      "seconds": 120,
+      "resistance": [
+        38,
+        42
+      ],
+      "cadence": [
+        90,
+        100
+      ],
+      "cue": "Prime for the sprints"
+    },
+    {
+      "name": "Sprint",
+      "seconds": 20,
+      "resistance": [
+        50,
+        60
+      ],
+      "cadence": [
+        100,
+        110
+      ],
+      "cue": "Everything you have"
+    },
+    {
+      "name": "Rest",
+      "seconds": 10,
+      "resistance": [
+        25,
+        30
+      ],
+      "cadence": [
+        80,
+        90
+      ]
+    },
+    {
+      "name": "Sprint",
+      "seconds": 20,
+      "resistance": [
+        50,
+        60
+      ],
+      "cadence": [
+        100,
+        110
+      ],
+      "cue": "Everything you have"
+    },
+    {
+      "name": "Rest",
+      "seconds": 10,
+      "resistance": [
+        25,
+        30
+      ],
+      "cadence": [
+        80,
+        90
+      ]
+    },
+    {
+      "name": "Sprint",
+      "seconds": 20,
+      "resistance": [
+        50,
+        60
+      ],
+      "cadence": [
+        100,
+        110
+      ],
+      "cue": "Everything you have"
+    },
+    {
+      "name": "Rest",
+      "seconds": 10,
+      "resistance": [
+        25,
+        30
+      ],
+      "cadence": [
+        80,
+        90
+      ]
+    },
+    {
+      "name": "Sprint",
+      "seconds": 20,
+      "resistance": [
+        50,
+        60
+      ],
+      "cadence": [
+        100,
+        110
+      ],
+      "cue": "Everything you have"
+    },
+    {
+      "name": "Rest",
+      "seconds": 10,
+      "resistance": [
+        25,
+        30
+      ],
+      "cadence": [
+        80,
+        90
+      ]
+    },
+    {
+      "name": "Sprint",
+      "seconds": 20,
+      "resistance": [
+        50,
+        60
+      ],
+      "cadence": [
+        100,
+        110
+      ],
+      "cue": "Everything you have"
+    },
+    {
+      "name": "Rest",
+      "seconds": 10,
+      "resistance": [
+        25,
+        30
+      ],
+      "cadence": [
+        80,
+        90
+      ]
+    },
+    {
+      "name": "Sprint",
+      "seconds": 20,
+      "resistance": [
+        50,
+        60
+      ],
+      "cadence": [
+        100,
+        110
+      ],
+      "cue": "Everything you have"
+    },
+    {
+      "name": "Rest",
+      "seconds": 10,
+      "resistance": [
+        25,
+        30
+      ],
+      "cadence": [
+        80,
+        90
+      ]
+    },
+    {
+      "name": "Sprint",
+      "seconds": 20,
+      "resistance": [
+        50,
+        60
+      ],
+      "cadence": [
+        100,
+        110
+      ],
+      "cue": "Everything you have"
+    },
+    {
+      "name": "Rest",
+      "seconds": 10,
+      "resistance": [
+        25,
+        30
+      ],
+      "cadence": [
+        80,
+        90
+      ]
+    },
+    {
+      "name": "Sprint",
+      "seconds": 20,
+      "resistance": [
+        50,
+        60
+      ],
+      "cadence": [
+        100,
+        110
+      ],
+      "cue": "Everything you have"
+    },
+    {
+      "name": "Rest",
+      "seconds": 10,
+      "resistance": [
+        25,
+        30
+      ],
+      "cadence": [
+        80,
+        90
+      ]
+    },
+    {
+      "name": "Recover",
+      "seconds": 120,
+      "resistance": [
+        25,
+        30
+      ],
+      "cadence": [
+        80,
+        90
+      ],
+      "cue": "Shake it out"
+    },
+    {
+      "name": "Sprint",
+      "seconds": 20,
+      "resistance": [
+        50,
+        60
+      ],
+      "cadence": [
+        100,
+        110
+      ],
+      "cue": "Everything you have"
+    },
+    {
+      "name": "Rest",
+      "seconds": 10,
+      "resistance": [
+        25,
+        30
+      ],
+      "cadence": [
+        80,
+        90
+      ]
+    },
+    {
+      "name": "Sprint",
+      "seconds": 20,
+      "resistance": [
+        50,
+        60
+      ],
+      "cadence": [
+        100,
+        110
+      ],
+      "cue": "Everything you have"
+    },
+    {
+      "name": "Rest",
+      "seconds": 10,
+      "resistance": [
+        25,
+        30
+      ],
+      "cadence": [
+        80,
+        90
+      ]
+    },
+    {
+      "name": "Sprint",
+      "seconds": 20,
+      "resistance": [
+        50,
+        60
+      ],
+      "cadence": [
+        100,
+        110
+      ],
+      "cue": "Everything you have"
+    },
+    {
+      "name": "Rest",
+      "seconds": 10,
+      "resistance": [
+        25,
+        30
+      ],
+      "cadence": [
+        80,
+        90
+      ]
+    },
+    {
+      "name": "Sprint",
+      "seconds": 20,
+      "resistance": [
+        50,
+        60
+      ],
+      "cadence": [
+        100,
+        110
+      ],
+      "cue": "Everything you have"
+    },
+    {
+      "name": "Rest",
+      "seconds": 10,
+      "resistance": [
+        25,
+        30
+      ],
+      "cadence": [
+        80,
+        90
+      ]
+    },
+    {
+      "name": "Sprint",
+      "seconds": 20,
+      "resistance": [
+        50,
+        60
+      ],
+      "cadence": [
+        100,
+        110
+      ],
+      "cue": "Everything you have"
+    },
+    {
+      "name": "Rest",
+      "seconds": 10,
+      "resistance": [
+        25,
+        30
+      ],
+      "cadence": [
+        80,
+        90
+      ]
+    },
+    {
+      "name": "Sprint",
+      "seconds": 20,
+      "resistance": [
+        50,
+        60
+      ],
+      "cadence": [
+        100,
+        110
+      ],
+      "cue": "Everything you have"
+    },
+    {
+      "name": "Rest",
+      "seconds": 10,
+      "resistance": [
+        25,
+        30
+      ],
+      "cadence": [
+        80,
+        90
+      ]
+    },
+    {
+      "name": "Sprint",
+      "seconds": 20,
+      "resistance": [
+        50,
+        60
+      ],
+      "cadence": [
+        100,
+        110
+      ],
+      "cue": "Everything you have"
+    },
+    {
+      "name": "Rest",
+      "seconds": 10,
+      "resistance": [
+        25,
+        30
+      ],
+      "cadence": [
+        80,
+        90
+      ]
+    },
+    {
+      "name": "Sprint",
+      "seconds": 20,
+      "resistance": [
+        50,
+        60
+      ],
+      "cadence": [
+        100,
+        110
+      ],
+      "cue": "Everything you have"
+    },
+    {
+      "name": "Rest",
+      "seconds": 10,
+      "resistance": [
+        25,
+        30
+      ],
+      "cadence": [
+        80,
+        90
+      ]
+    },
+    {
+      "name": "Cool down",
+      "seconds": 240,
+      "resistance": [
+        22,
+        27
+      ],
+      "cadence": [
+        75,
+        85
+      ],
+      "cue": "That was the hard part"
+    }
+  ]
+}

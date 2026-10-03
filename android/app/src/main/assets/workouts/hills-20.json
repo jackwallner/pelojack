@@ -1,0 +1,151 @@
+{
+  "id": "hills-20",
+  "name": "20 min Hills",
+  "description": "Three climbs, each finishing out of the saddle.",
+  "category": "climb",
+  "segments": [
+    {
+      "name": "Warm up",
+      "seconds": 240,
+      "resistance": [
+        28,
+        32
+      ],
+      "cadence": [
+        80,
+        90
+      ],
+      "cue": "Easy roll to the hills"
+    },
+    {
+      "name": "Seated climb",
+      "seconds": 120,
+      "resistance": [
+        45,
+        50
+      ],
+      "cadence": [
+        65,
+        75
+      ],
+      "cue": "Heavy and controlled"
+    },
+    {
+      "name": "Stand and climb",
+      "seconds": 60,
+      "resistance": [
+        50,
+        55
+      ],
+      "cadence": [
+        55,
+        65
+      ],
+      "cue": "Out of the saddle"
+    },
+    {
+      "name": "Recover",
+      "seconds": 60,
+      "resistance": [
+        30,
+        35
+      ],
+      "cadence": [
+        80,
+        90
+      ],
+      "cue": "Sit, spin, breathe"
+    },
+    {
+      "name": "Seated climb",
+      "seconds": 120,
+      "resistance": [
+        45,
+        50
+      ],
+      "cadence": [
+        65,
+        75
+      ],
+      "cue": "Heavy and controlled"
+    },
+    {
+      "name": "Stand and climb",
+      "seconds": 60,
+      "resistance": [
+        50,
+        55
+      ],
+      "cadence": [
+        55,
+        65
+      ],
+      "cue": "Out of the saddle"
+    },
+    {
+      "name": "Recover",
+      "seconds": 60,
+      "resistance": [
+        30,
+        35
+      ],
+      "cadence": [
+        80,
+        90
+      ],
+      "cue": "Sit, spin, breathe"
+    },
+    {
+      "name": "Seated climb",
+      "seconds": 120,
+      "resistance": [
+        45,
+        50
+      ],
+      "cadence": [
+        65,
+        75
+      ],
+      "cue": "Heavy and controlled"
+    },
+    {
+      "name": "Stand and climb",
+      "seconds": 60,
+      "resistance": [
+        50,
+        55
+      ],
+      "cadence": [
+        55,
+        65
+      ],
+      "cue": "Out of the saddle"
+    },
+    {
+      "name": "Recover",
+      "seconds": 60,
+      "resistance": [
+        30,
+        35
+      ],
+      "cadence": [
+        80,
+        90
+      ],
+      "cue": "Sit, spin, breathe"
+    },
+    {
+      "name": "Cool down",
+      "seconds": 240,
+      "resistance": [
+        25,
+        30
+      ],
+      "cadence": [
+        75,
+        85
+      ],
+      "cue": "Roll it home"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "cool-down-5",
+  "name": "5 min Cool Down",
+  "description": "Bring the heart rate down gently.",
+  "category": "cool_down",
+  "segments": [
+    {
+      "name": "Flush",
+      "seconds": 180,
+      "resistance": [
+        25,
+        30
+      ],
+      "cadence": [
+        75,
+        85
+      ],
+      "cue": "Light and smooth"
+    },
+    {
+      "name": "Slow it down",
+      "seconds": 120,
+      "resistance": [
+        20,
+        25
+      ],
+      "cadence": [
+        70,
+        80
+      ],
+      "cue": "Let the breathing settle"
+    }
+  ]
+}

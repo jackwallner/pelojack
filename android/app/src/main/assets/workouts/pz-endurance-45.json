@@ -1,0 +1,86 @@
+{
+  "id": "pz-endurance-45",
+  "name": "45 min Power Zone Endurance",
+  "description": "Three long zone 2 blocks, each finishing in zone 3.",
+  "category": "power_zone",
+  "segments": [
+    {
+      "name": "Warm up",
+      "seconds": 240,
+      "cadence": [
+        80,
+        90
+      ],
+      "zone": 1
+    },
+    {
+      "name": "Zone 2",
+      "seconds": 660,
+      "cadence": [
+        85,
+        95
+      ],
+      "zone": 2,
+      "cue": "Endurance pace"
+    },
+    {
+      "name": "Zone 3",
+      "seconds": 120,
+      "cadence": [
+        85,
+        95
+      ],
+      "zone": 3,
+      "cue": "Tempo"
+    },
+    {
+      "name": "Zone 2",
+      "seconds": 660,
+      "cadence": [
+        85,
+        95
+      ],
+      "zone": 2,
+      "cue": "Endurance pace"
+    },
+    {
+      "name": "Zone 3",
+      "seconds": 120,
+      "cadence": [
+        85,
+        95
+      ],
+      "zone": 3,
+      "cue": "Tempo"
+    },
+    {
+      "name": "Zone 2",
+      "seconds": 660,
+      "cadence": [
+        85,
+        95
+      ],
+      "zone": 2,
+      "cue": "Endurance pace"
+    },
+    {
+      "name": "Zone 3",
+      "seconds": 120,
+      "cadence": [
+        85,
+        95
+      ],
+      "zone": 3,
+      "cue": "Tempo"
+    },
+    {
+      "name": "Cool down",
+      "seconds": 120,
+      "cadence": [
+        80,
+        90
+      ],
+      "zone": 1
+    }
+  ]
+}

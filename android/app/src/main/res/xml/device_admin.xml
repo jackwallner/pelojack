@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Device owner is only for installing updates silently; it asks for no policies. -->
+<device-admin>
+    <uses-policies />
+</device-admin>

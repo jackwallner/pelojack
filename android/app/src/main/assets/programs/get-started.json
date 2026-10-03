@@ -1,0 +1,19 @@
+{
+  "id": "get-started",
+  "name": "Get Started",
+  "description": "Three weeks that mix steady rides, climbs and intervals.",
+  "weeks": [
+    [
+      "low-impact-20",
+      "intervals-20"
+    ],
+    [
+      "hills-20",
+      "endurance-45"
+    ],
+    [
+      "hiit-20",
+      "climb-30"
+    ]
+  ]
+}

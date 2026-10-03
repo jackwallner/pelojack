@@ -1,0 +1,27 @@
+{
+  "id": "endurance-base",
+  "name": "Endurance Base",
+  "description": "Four weeks of mostly steady riding to build an aerobic engine.",
+  "weeks": [
+    [
+      "low-impact-20",
+      "pz-endurance-30",
+      "endurance-45"
+    ],
+    [
+      "endurance-45",
+      "pz-endurance-30",
+      "low-impact-20"
+    ],
+    [
+      "pz-endurance-45",
+      "hills-20",
+      "endurance-45"
+    ],
+    [
+      "pz-endurance-45",
+      "climb-30",
+      "pz-endurance-30"
+    ]
+  ]
+}

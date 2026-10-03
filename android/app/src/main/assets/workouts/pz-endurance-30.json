@@ -1,0 +1,75 @@
+{
+  "id": "pz-endurance-30",
+  "name": "30 min Power Zone Endurance",
+  "description": "Long zone 2 blocks with short lifts into zone 3.",
+  "category": "power_zone",
+  "segments": [
+    {
+      "name": "Warm up",
+      "seconds": 300,
+      "cadence": [
+        80,
+        90
+      ],
+      "zone": 1,
+      "cue": "Zone 1, easy"
+    },
+    {
+      "name": "Zone 2",
+      "seconds": 420,
+      "cadence": [
+        85,
+        95
+      ],
+      "zone": 2,
+      "cue": "Stay in zone 2 the whole block"
+    },
+    {
+      "name": "Zone 3",
+      "seconds": 60,
+      "cadence": [
+        85,
+        95
+      ],
+      "zone": 3,
+      "cue": "Lift into zone 3"
+    },
+    {
+      "name": "Zone 2",
+      "seconds": 420,
+      "cadence": [
+        85,
+        95
+      ],
+      "zone": 2
+    },
+    {
+      "name": "Zone 3",
+      "seconds": 60,
+      "cadence": [
+        85,
+        95
+      ],
+      "zone": 3
+    },
+    {
+      "name": "Zone 2",
+      "seconds": 420,
+      "cadence": [
+        85,
+        95
+      ],
+      "zone": 2,
+      "cue": "Last block, patient"
+    },
+    {
+      "name": "Cool down",
+      "seconds": 120,
+      "cadence": [
+        80,
+        90
+      ],
+      "zone": 1
+    }
+  ]
+}

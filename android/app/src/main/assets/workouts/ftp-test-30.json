@@ -1,0 +1,66 @@
+{
+  "id": "ftp-test-30",
+  "name": "30 min FTP Test",
+  "description": "A 20-minute all-out steady effort. Sets your power zones.",
+  "category": "ftp_test",
+  "segments": [
+    {
+      "name": "Warm up",
+      "seconds": 300,
+      "cadence": [
+        85,
+        95
+      ],
+      "zone": 1,
+      "cue": "Easy, the test is coming"
+    },
+    {
+      "name": "Opener",
+      "seconds": 60,
+      "cadence": [
+        90,
+        100
+      ],
+      "zone": 4,
+      "cue": "Wake the legs up"
+    },
+    {
+      "name": "Recover",
+      "seconds": 120,
+      "cadence": [
+        80,
+        90
+      ],
+      "zone": 1
+    },
+    {
+      "name": "Opener",
+      "seconds": 60,
+      "cadence": [
+        95,
+        105
+      ],
+      "zone": 5
+    },
+    {
+      "name": "Get ready",
+      "seconds": 60,
+      "cadence": [
+        80,
+        90
+      ],
+      "zone": 1,
+      "cue": "Twenty minutes starts next. Pace it evenly."
+    },
+    {
+      "name": "FTP test",
+      "seconds": 1200,
+      "cadence": [
+        85,
+        100
+      ],
+      "cue": "Your best steady effort for 20 minutes. Set the resistance yourself.",
+      "test": true
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "id": "climb-30",
+  "name": "30 min Climb",
+  "description": "Two long climbs that get steeper every three minutes.",
+  "category": "climb",
+  "segments": [
+    {
+      "name": "Warm up",
+      "seconds": 300,
+      "resistance": [
+        28,
+        32
+      ],
+      "cadence": [
+        80,
+        90
+      ],
+      "cue": "Spin easy"
+    },
+    {
+      "name": "Climb",
+      "seconds": 180,
+      "resistance": [
+        40,
+        44
+      ],
+      "cadence": [
+        70,
+        80
+      ],
+      "cue": "Settle into it"
+    },
+    {
+      "name": "Climb",
+      "seconds": 180,
+      "resistance": [
+        44,
+        48
+      ],
+      "cadence": [
+        65,
+        75
+      ],
+      "cue": "Steeper"
+    },
+    {
+      "name": "Climb",
+      "seconds": 180,
+      "resistance": [
+        48,
+        52
+      ],
+      "cadence": [
+        60,
+        70
+      ],
+      "cue": "Stay seated, push through the heels"
+    },
+    {
+      "name": "Recover",
+      "seconds": 180,
+      "resistance": [
+        30,
+        34
+      ],
+      "cadence": [
+        80,
+        90
+      ],
+      "cue": "Recover fully"
+    },
+    {
+      "name": "Climb",
+      "seconds": 180,
+      "resistance": [
+        42,
+        46
+      ],
+      "cadence": [
+        70,
+        80
+      ],
+      "cue": "Second climb"
+    },
+    {
+      "name": "Climb",
+      "seconds": 180,
+      "resistance": [
+        47,
+        51
+      ],
+      "cadence": [
+        65,
+        75
+      ],
+      "cue": "Keep the upper body quiet"
+    },
+    {
+      "name": "Climb",
+      "seconds": 180,
+      "resistance": [
+        52,
+        56
+      ],
+      "cadence": [
+        60,
+        70
+      ],
+      "cue": "Last one, out of the saddle if you need to"
+    },
+    {
+      "name": "Cool down",
+      "seconds": 240,
+      "resistance": [
+        25,
+        30
+      ],
+      "cadence": [
+        75,
+        85
+      ],
+      "cue": "Well climbed"
+    }
+  ]
+}
