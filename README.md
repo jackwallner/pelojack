@@ -2,6 +2,8 @@
 
 Pelojack is an independent ride app for owners of the Peloton Bike+. It runs on the bike's Android tablet and pairs with an Apple Watch companion.
 
+Marketing site: [jackwallner.com/ios/pelojack](https://jackwallner.com/ios/pelojack/). The same page is served from [GitHub Pages](https://jackwallner.github.io/pelojack/).
+
 It supports custom workouts, power targets, resistance control, live ride metrics, local ride history, heart rate from Bluetooth straps or Apple Watch, music controls, video rides, and optional in-ride app or camera overlays. The built-in workouts are original Pelojack files. Core bike control uses the tablet's local bike service and does not require a Peloton account or cloud API.
 
 Pelojack is not made, approved, or supported by Peloton. Peloton and Bike+ are trademarks of Peloton Interactive, Inc.

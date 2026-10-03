@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fafafa" />
+    <link rel="icon" type="image/png" href="icon.png" />
+    <title>Pelojack Privacy</title>
+    <meta
+      name="description"
+      content="Privacy details for Pelojack, an independent open-source Bike+ ride app."
+    />
+    <link
+      rel="canonical"
+      href="https://jackwallner.com/ios/pelojack/privacy.html"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+          "Helvetica Neue", sans-serif;
+        color: #1d1d1f;
+        background: #fafafa;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      .container {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      /* Nav */
+      nav {
+        padding: 16px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        background: rgba(250, 250, 250, 0.85);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+
+      nav .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .nav-brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        color: #1d1d1f;
+      }
+
+      .nav-brand img {
+        width: 32px;
+        height: 32px;
+        border-radius: 7px;
+      }
+
+      .nav-brand span {
+        font-size: 15px;
+        font-weight: 600;
+      }
+
+      .nav-link {
+        font-size: 14px;
+        text-decoration: none;
+        background: #1d1d1f;
+        color: #fff;
+        padding: 8px 18px;
+        border-radius: 980px;
+        font-weight: 500;
+        transition: opacity 0.15s;
+      }
+
+      .nav-link:hover {
+        opacity: 0.85;
+      }
+
+      /* Hero */
+      .hero {
+        text-align: center;
+        padding: 100px 24px 64px;
+      }
+
+      .hero h1 {
+        font-size: 52px;
+        font-weight: 700;
+        letter-spacing: -1.5px;
+        line-height: 1.08;
+        margin-bottom: 16px;
+      }
+
+      .hero h1 span {
+        background: linear-gradient(135deg, #f25c3a, #f0884a);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .hero .tagline {
+        font-size: 19px;
+        color: #6e6e73;
+        line-height: 1.5;
+        max-width: 440px;
+        margin: 0 auto 12px;
+      }
+
+      .hero .platforms {
+        font-size: 13px;
+        color: #86868b;
+        letter-spacing: 0.3px;
+        margin-bottom: 36px;
+      }
+
+      .download-btn {
+        display: inline-block;
+        background: #1d1d1f;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 500;
+        padding: 14px 36px;
+        border-radius: 980px;
+        text-decoration: none;
+        transition: opacity 0.15s;
+      }
+
+      .download-btn:hover {
+        opacity: 0.85;
+      }
+
+      /* Screenshot showcase */
+      .showcase {
+        padding: 0 0 80px;
+      }
+
+      .showcase-scroll {
+        display: flex;
+        gap: 24px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        padding: 0 24px;
+        max-width: 1200px;
+        margin: 0 auto;
+        scrollbar-width: none;
+      }
+
+      .showcase-scroll::-webkit-scrollbar {
+        display: none;
+      }
+
+      .showcase-card {
+        flex-shrink: 0;
+        scroll-snap-align: center;
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow:
+          0 2px 8px rgba(0, 0, 0, 0.06),
+          0 16px 48px rgba(0, 0, 0, 0.08);
+      }
+
+      .showcase-card img {
+        height: 540px;
+        display: block;
+      }
+
+      /* Features */
+      .features {
+        padding: 80px 0;
+        background: #fff;
+        border-top: 1px solid rgba(0, 0, 0, 0.06);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      }
+
+      .features-header {
+        text-align: center;
+        margin-bottom: 56px;
+      }
+
+      .features-header h2 {
+        font-size: 36px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        margin-bottom: 8px;
+      }
+
+      .features-header p {
+        font-size: 17px;
+        color: #6e6e73;
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        background: rgba(0, 0, 0, 0.06);
+        border-top: 1px solid rgba(0, 0, 0, 0.06);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      }
+
+      .feature-card {
+        background: #fff;
+        padding: 36px 32px;
+      }
+
+      .feature-card .label {
+        display: inline-block;
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        color: #86868b;
+        margin-bottom: 10px;
+      }
+
+      .feature-card .label.vitals-plus {
+        color: #f25c3a;
+      }
+
+      .feature-card h3 {
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: -0.2px;
+        margin-bottom: 8px;
+      }
+
+      .feature-card p {
+        font-size: 14px;
+        color: #6e6e73;
+        line-height: 1.55;
+      }
+
+      /* Privacy */
+      .privacy {
+        padding: 80px 0;
+      }
+
+      .privacy .container {
+        max-width: 640px;
+        text-align: center;
+      }
+
+      .privacy .lockup {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        background: #f5f5f7;
+        margin-bottom: 20px;
+      }
+
+      .privacy .lockup svg {
+        width: 22px;
+        height: 22px;
+        fill: none;
+        stroke: #1d1d1f;
+        stroke-width: 1.8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .privacy h2 {
+        font-size: 32px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        margin-bottom: 12px;
+      }
+
+      .privacy p {
+        font-size: 17px;
+        color: #6e6e73;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      .privacy a {
+        font-size: 15px;
+        color: #0066cc;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .privacy a:hover {
+        text-decoration: underline;
+      }
+
+      /* More Info */
+      .more-info {
+        padding: 64px 24px;
+        background: #fff;
+        border-top: 1px solid rgba(0, 0, 0, 0.06);
+      }
+
+      .more-info-header {
+        text-align: center;
+        margin-bottom: 48px;
+      }
+
+      .more-info-header h2 {
+        font-size: 32px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        margin-bottom: 8px;
+      }
+
+      .more-info-header h1 {
+        font-size: 32px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        margin-bottom: 8px;
+      }
+
+      .more-info-header p {
+        font-size: 17px;
+        color: #6e6e73;
+      }
+
+      .more-info-content {
+        max-width: 720px;
+        margin: 0 auto;
+      }
+
+      .more-info-section {
+        margin-bottom: 40px;
+      }
+
+      .more-info-section h3 {
+        font-size: 13px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        color: #86868b;
+        margin-bottom: 12px;
+      }
+
+      .more-info-section p {
+        font-size: 15px;
+        line-height: 1.6;
+        color: #1d1d1f;
+        margin-bottom: 12px;
+      }
+
+      .more-info-section p:last-child {
+        margin-bottom: 0;
+      }
+
+      .more-info-section strong {
+        font-weight: 600;
+      }
+
+      .specs-table {
+        width: 100%;
+        font-size: 14px;
+        border-collapse: collapse;
+        margin-top: 16px;
+      }
+
+      .specs-table td {
+        padding: 8px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      }
+
+      .specs-table td:first-child {
+        color: #86868b;
+        width: 140px;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      /* CTA */
+      .cta {
+        text-align: center;
+        padding: 64px 24px 80px;
+        background: #fff;
+        border-top: 1px solid rgba(0, 0, 0, 0.06);
+      }
+
+      .cta h2 {
+        font-size: 32px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        margin-bottom: 6px;
+      }
+
+      .cta p {
+        font-size: 15px;
+        color: #86868b;
+        margin-bottom: 28px;
+      }
+
+      /* Footer */
+      footer {
+        text-align: center;
+        padding: 20px 24px;
+        font-size: 12px;
+        color: #86868b;
+      }
+
+      footer a {
+        color: #86868b;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+
+      footer a:hover {
+        color: #1d1d1f;
+      }
+
+      footer .divider {
+        margin: 4px 0;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .hero {
+          padding: 72px 20px 48px;
+        }
+        .hero h1 {
+          font-size: 36px;
+          letter-spacing: -1px;
+        }
+        .hero .tagline {
+          font-size: 17px;
+        }
+
+        .showcase-card img {
+          height: 400px;
+        }
+
+        .features-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .features-header h2 {
+          font-size: 28px;
+        }
+        .privacy h2,
+        .cta h2 {
+          font-size: 26px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .showcase-card img {
+          height: 360px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <a class="nav-brand" href="./">
+          <img src="icon.png" alt="Pelojack app icon" />
+          <span>Pelojack</span>
+        </a>
+        <a class="nav-link" href="https://jackwallner.com/ios/pelojack/"
+          >Back to Pelojack</a
+        >
+      </div>
+    </nav>
+
+    <section class="more-info">
+      <div class="container">
+        <div class="more-info-header">
+          <h1>Privacy</h1>
+          <p>Last updated October 3, 2026</p>
+        </div>
+        <div class="more-info-content">
+          <div class="more-info-section">
+            <h3>Summary</h3>
+            <p>
+              Pelojack has no user accounts, advertising, analytics, or
+              developer-operated cloud backend. The app stores ride records and
+              workout files on the Bike+ tablet. Core bike control uses the
+              tablet's local bike service and does not send ride data to a
+              Pelojack server.
+            </p>
+          </div>
+          <div class="more-info-section">
+            <h3>Bike and ride data</h3>
+            <p>
+              The Android app reads bike telemetry and controls resistance
+              through the Bike+ tablet's local service. Ride summaries and
+              samples are stored in the app's private storage on that tablet.
+              Bluetooth heart-rate straps can send heart-rate readings to the
+              tablet during a ride.
+            </p>
+          </div>
+          <div class="more-info-section">
+            <h3>Apple Watch and HealthKit</h3>
+            <p>
+              The Watch companion sends heart rate directly to the Bike+ tablet
+              over Bluetooth. When you grant HealthKit permission, the Watch app
+              records the indoor cycling workout in Apple Health. Apple Health
+              data is handled by Apple under your device settings and Apple's
+              privacy terms.
+            </p>
+          </div>
+          <div class="more-info-section">
+            <h3>Third-party services</h3>
+            <p>
+              If you use video, music, or the optional Nanit camera viewer, the
+              selected service receives requests from your device. Those
+              services have their own privacy policies and account settings.
+              Pelojack does not send credentials or ride data to a Pelojack
+              server.
+            </p>
+          </div>
+          <div class="more-info-section">
+            <h3>Optional local maintenance server</h3>
+            <p>
+              The basic USB setup does not start the maintenance server. If you
+              run <code>scripts/bike-link.sh</code>, Pelojack becomes the
+              Android device owner and starts an HTTP server on your home
+              network at port 8765. A generated token is required. The server
+              can install APKs, transfer workout or video files, return app logs
+              and screenshots, and reboot the tablet. HTTP traffic is not
+              encrypted, so use it only on a trusted local network and never
+              expose the port to the internet. You can release device-owner
+              privileges and uninstall Pelojack with
+              <code>scripts/bike-restore.sh --remove</code>.
+            </p>
+          </div>
+          <div class="more-info-section">
+            <h3>Website and contact</h3>
+            <p>
+              This page is hosted by GitHub Pages, which may process ordinary
+              web request information under GitHub's privacy policy. For
+              questions or corrections, open an issue in the
+              <a href="https://github.com/jackwallner/pelojack/issues"
+                >Pelojack repository</a
+              >.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="divider">&copy; 2026 Jack Wallner</div>
+      <div>
+        <a href="https://jackwallner.com/ios/pelojack/">Pelojack</a>
+        <a href="https://github.com/jackwallner/pelojack">Source</a>
+      </div>
+    </footer>
+  </body>
+</html>

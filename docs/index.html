@@ -1,0 +1,777 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fafafa" />
+    <link rel="icon" type="image/png" href="icon.png" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <title>Pelojack - Your Bike+, your ride</title>
+    <meta
+      name="description"
+      content="Custom workouts, automatic resistance, live ride metrics, and Apple Watch heart rate on the Bike+ you already own."
+    />
+    <link rel="canonical" href="https://jackwallner.com/ios/pelojack/" />
+    <meta
+      name="keywords"
+      content="Pelojack, Peloton Bike+, Bike+ workouts, custom cycling workouts, Apple Watch heart rate, open-source cycling app"
+    />
+    <meta property="og:title" content="Pelojack - Your Bike+, your ride" />
+    <meta
+      property="og:description"
+      content="Custom workouts, automatic resistance, live ride metrics, and Apple Watch heart rate on the Bike+ you already own."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jackwallner.com/ios/pelojack/" />
+    <meta
+      property="og:image"
+      content="https://jackwallner.com/ios/pelojack/icon.png"
+    />
+    <meta property="og:site_name" content="Pelojack" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Pelojack - Your Bike+, your ride" />
+    <meta
+      name="twitter:description"
+      content="Custom workouts, automatic resistance, live ride metrics, and Apple Watch heart rate on the Bike+ you already own."
+    />
+    <meta
+      name="twitter:image"
+      content="https://jackwallner.com/ios/pelojack/icon.png"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Pelojack",
+        "applicationCategory": "SportsApplication",
+        "operatingSystem": "Android 10+, watchOS 10+",
+        "description": "An open-source Bike+ ride app for custom workouts, live metrics, resistance control, and Apple Watch heart rate.",
+        "url": "https://jackwallner.com/ios/pelojack/",
+        "downloadUrl": "https://github.com/jackwallner/pelojack",
+        "license": "https://opensource.org/license/mit",
+        "isAccessibleForFree": true,
+        "author": { "@type": "Person", "name": "Jack Wallner" }
+      }
+    </script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+          "Helvetica Neue", sans-serif;
+        color: #1d1d1f;
+        background: #fafafa;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      .container {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      /* Nav */
+      nav {
+        padding: 16px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        background: rgba(250, 250, 250, 0.85);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+
+      nav .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .nav-brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        color: #1d1d1f;
+      }
+
+      .nav-brand img {
+        width: 32px;
+        height: 32px;
+        border-radius: 7px;
+      }
+
+      .nav-brand span {
+        font-size: 15px;
+        font-weight: 600;
+      }
+
+      .nav-link {
+        font-size: 14px;
+        text-decoration: none;
+        background: #1d1d1f;
+        color: #fff;
+        padding: 8px 18px;
+        border-radius: 980px;
+        font-weight: 500;
+        transition: opacity 0.15s;
+      }
+
+      .nav-link:hover {
+        opacity: 0.85;
+      }
+
+      /* Hero */
+      .hero {
+        text-align: center;
+        padding: 100px 24px 64px;
+      }
+
+      .hero h1 {
+        font-size: 52px;
+        font-weight: 700;
+        letter-spacing: -1.5px;
+        line-height: 1.08;
+        margin-bottom: 16px;
+      }
+
+      .hero h1 span {
+        background: linear-gradient(135deg, #f25c3a, #f0884a);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .hero .tagline {
+        font-size: 19px;
+        color: #6e6e73;
+        line-height: 1.5;
+        max-width: 440px;
+        margin: 0 auto 12px;
+      }
+
+      .hero .platforms {
+        font-size: 13px;
+        color: #86868b;
+        letter-spacing: 0.3px;
+        margin-bottom: 36px;
+      }
+
+      .download-btn {
+        display: inline-block;
+        background: #1d1d1f;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 500;
+        padding: 14px 36px;
+        border-radius: 980px;
+        text-decoration: none;
+        transition: opacity 0.15s;
+      }
+
+      .download-btn:hover {
+        opacity: 0.85;
+      }
+
+      /* Screenshot showcase */
+      .showcase {
+        padding: 0 0 80px;
+      }
+
+      .showcase-scroll {
+        display: flex;
+        gap: 24px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        padding: 0 24px;
+        max-width: 1200px;
+        margin: 0 auto;
+        scrollbar-width: none;
+      }
+
+      .showcase-scroll::-webkit-scrollbar {
+        display: none;
+      }
+
+      .showcase-card {
+        flex-shrink: 0;
+        scroll-snap-align: center;
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow:
+          0 2px 8px rgba(0, 0, 0, 0.06),
+          0 16px 48px rgba(0, 0, 0, 0.08);
+      }
+
+      .showcase-card img {
+        height: 540px;
+        display: block;
+      }
+
+      /* Features */
+      .features {
+        padding: 80px 0;
+        background: #fff;
+        border-top: 1px solid rgba(0, 0, 0, 0.06);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      }
+
+      .features-header {
+        text-align: center;
+        margin-bottom: 56px;
+      }
+
+      .features-header h2 {
+        font-size: 36px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        margin-bottom: 8px;
+      }
+
+      .features-header p {
+        font-size: 17px;
+        color: #6e6e73;
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        background: rgba(0, 0, 0, 0.06);
+        border-top: 1px solid rgba(0, 0, 0, 0.06);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      }
+
+      .feature-card {
+        background: #fff;
+        padding: 36px 32px;
+      }
+
+      .feature-card .label {
+        display: inline-block;
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        color: #86868b;
+        margin-bottom: 10px;
+      }
+
+      .feature-card .label.vitals-plus {
+        color: #f25c3a;
+      }
+
+      .feature-card h3 {
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: -0.2px;
+        margin-bottom: 8px;
+      }
+
+      .feature-card p {
+        font-size: 14px;
+        color: #6e6e73;
+        line-height: 1.55;
+      }
+
+      /* Privacy */
+      .privacy {
+        padding: 80px 0;
+      }
+
+      .privacy .container {
+        max-width: 640px;
+        text-align: center;
+      }
+
+      .privacy .lockup {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        background: #f5f5f7;
+        margin-bottom: 20px;
+      }
+
+      .privacy .lockup svg {
+        width: 22px;
+        height: 22px;
+        fill: none;
+        stroke: #1d1d1f;
+        stroke-width: 1.8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .privacy h2 {
+        font-size: 32px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        margin-bottom: 12px;
+      }
+
+      .privacy p {
+        font-size: 17px;
+        color: #6e6e73;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      .privacy a {
+        font-size: 15px;
+        color: #0066cc;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .privacy a:hover {
+        text-decoration: underline;
+      }
+
+      /* More Info */
+      .more-info {
+        padding: 64px 24px;
+        background: #fff;
+        border-top: 1px solid rgba(0, 0, 0, 0.06);
+      }
+
+      .more-info-header {
+        text-align: center;
+        margin-bottom: 48px;
+      }
+
+      .more-info-header h2 {
+        font-size: 32px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        margin-bottom: 8px;
+      }
+
+      .more-info-header p {
+        font-size: 17px;
+        color: #6e6e73;
+      }
+
+      .more-info-content {
+        max-width: 720px;
+        margin: 0 auto;
+      }
+
+      .more-info-section {
+        margin-bottom: 40px;
+      }
+
+      .more-info-section h3 {
+        font-size: 13px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        color: #86868b;
+        margin-bottom: 12px;
+      }
+
+      .more-info-section p {
+        font-size: 15px;
+        line-height: 1.6;
+        color: #1d1d1f;
+        margin-bottom: 12px;
+      }
+
+      .more-info-section p:last-child {
+        margin-bottom: 0;
+      }
+
+      .more-info-section strong {
+        font-weight: 600;
+      }
+
+      .specs-table {
+        width: 100%;
+        font-size: 14px;
+        border-collapse: collapse;
+        margin-top: 16px;
+      }
+
+      .specs-table td {
+        padding: 8px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      }
+
+      .specs-table td:first-child {
+        color: #86868b;
+        width: 140px;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      /* CTA */
+      .cta {
+        text-align: center;
+        padding: 64px 24px 80px;
+        background: #fff;
+        border-top: 1px solid rgba(0, 0, 0, 0.06);
+      }
+
+      .cta h2 {
+        font-size: 32px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        margin-bottom: 6px;
+      }
+
+      .cta p {
+        font-size: 15px;
+        color: #86868b;
+        margin-bottom: 28px;
+      }
+
+      /* Footer */
+      footer {
+        text-align: center;
+        padding: 20px 24px;
+        font-size: 12px;
+        color: #86868b;
+      }
+
+      footer a {
+        color: #86868b;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+
+      footer a:hover {
+        color: #1d1d1f;
+      }
+
+      footer .divider {
+        margin: 4px 0;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .hero {
+          padding: 72px 20px 48px;
+        }
+        .hero h1 {
+          font-size: 36px;
+          letter-spacing: -1px;
+        }
+        .hero .tagline {
+          font-size: 17px;
+        }
+
+        .showcase-card img {
+          height: 400px;
+        }
+
+        .features-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .features-header h2 {
+          font-size: 28px;
+        }
+        .privacy h2,
+        .cta h2 {
+          font-size: 26px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .showcase-card img {
+          height: 360px;
+        }
+      }
+
+      .hero-kicker {
+        display: inline-block;
+        margin-bottom: 18px;
+        color: #f25c3a;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      .showcase .showcase-card {
+        width: min(86vw, 980px);
+        background: #fff;
+      }
+
+      .showcase .showcase-card img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .showcase-card figcaption {
+        padding: 14px 18px;
+        color: #6e6e73;
+        font-size: 13px;
+        line-height: 1.5;
+      }
+
+      .showcase-note {
+        margin: 14px 24px 0;
+        color: #86868b;
+        font-size: 13px;
+        text-align: center;
+      }
+
+      .feature-card .label.accent {
+        color: #f25c3a;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <a class="nav-brand" href="./">
+          <img src="icon.png" alt="Pelojack app icon" />
+          <span>Pelojack</span>
+        </a>
+        <a class="nav-link" href="https://github.com/jackwallner/pelojack"
+          >View source</a
+        >
+      </div>
+    </nav>
+
+    <section class="hero">
+      <p class="hero-kicker">Open source · MIT</p>
+      <h1>Your Bike+.<br /><span>Your ride.</span></h1>
+      <p class="tagline">
+        Custom workouts, automatic resistance, and live metrics on the bike you
+        already own.
+      </p>
+      <p class="platforms">Bike+ tablet · Apple Watch · Android + watchOS</p>
+      <a
+        class="download-btn"
+        href="https://github.com/jackwallner/pelojack#install-on-android"
+        >Get the source</a
+      >
+    </section>
+
+    <section class="showcase" aria-label="Pelojack app screens">
+      <div class="showcase-scroll">
+        <figure class="showcase-card">
+          <img
+            src="screenshots/workouts.png"
+            alt="The Bike+ workout library with built-in intervals, climbs, endurance, power zone, and recovery rides."
+          />
+          <figcaption>
+            Start with a built-in workout, build your own, or add a compatible
+            workout file.
+          </figcaption>
+        </figure>
+        <figure class="showcase-card">
+          <img
+            src="screenshots/live-ride-simulated.png"
+            alt="Pelojack live ride screen with cadence, output, resistance, speed, distance, and a live power graph. The displayed telemetry is simulated."
+          />
+          <figcaption>
+            Live ride view. The telemetry in this emulator capture is simulated.
+          </figcaption>
+        </figure>
+      </div>
+      <p class="showcase-note">
+        Example screens captured on a clean Bike+ tablet emulator. No personal
+        ride data is shown.
+      </p>
+    </section>
+
+    <section class="features">
+      <div class="container">
+        <div class="features-header">
+          <h2>Ride on your terms</h2>
+          <p>
+            A focused app for the Bike+ tablet, with your workouts and your
+            data.
+          </p>
+        </div>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <span class="label">Workouts</span>
+          <h3>Make the plan yours</h3>
+          <p>
+            Use the built-in library, create a workout on the tablet, or import
+            a compatible JSON or ZWO file.
+          </p>
+        </div>
+        <div class="feature-card">
+          <span class="label accent">Resistance</span>
+          <h3>Follow the work</h3>
+          <p>
+            Structured segments can guide resistance, while ERG mode holds a
+            selected power target.
+          </p>
+        </div>
+        <div class="feature-card">
+          <span class="label">Live ride</span>
+          <h3>See the numbers that matter</h3>
+          <p>
+            Cadence, power, resistance, speed, distance, and ride history stay
+            easy to read from the saddle.
+          </p>
+        </div>
+        <div class="feature-card">
+          <span class="label">Apple Watch</span>
+          <h3>Heart rate to the bike</h3>
+          <p>
+            Send Watch heart rate directly to the tablet over Bluetooth, or pair
+            another compatible heart-rate strap.
+          </p>
+        </div>
+        <div class="feature-card">
+          <span class="label">Your media</span>
+          <h3>Ride with video and music</h3>
+          <p>
+            Use supported video rides and media controls alongside a workout,
+            with optional app overlays.
+          </p>
+        </div>
+        <div class="feature-card">
+          <span class="label">Local first</span>
+          <h3>No Peloton login for core rides</h3>
+          <p>
+            Pelojack controls the bike through its on-device service. It does
+            not need a Peloton account or cloud API.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="privacy">
+      <div class="container">
+        <div class="lockup">
+          <svg viewBox="0 0 24 24">
+            <rect x="3" y="11" width="18" height="11" rx="2" />
+            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+          </svg>
+        </div>
+        <h2>Ride history stays on the tablet</h2>
+        <p>
+          Pelojack keeps workout plans and ride history on the tablet and has no
+          Pelojack cloud account or analytics. Apple Watch can save workouts to
+          Apple Health when you allow it. Video, music, and camera features
+          contact the services you choose. Cable-free maintenance is optional
+          and uses a token-authenticated server on your home network.
+        </p>
+        <a href="privacy.html">Privacy details &rarr;</a>
+      </div>
+    </section>
+
+    <section class="more-info">
+      <div class="container">
+        <div class="more-info-header">
+          <h2>More info</h2>
+          <p>Built for one bike, designed to be useful to its owner.</p>
+        </div>
+        <div class="more-info-content">
+          <div class="more-info-section">
+            <h3>The Pitch</h3>
+            <p>
+              Pelojack turns the Bike+ tablet into a flexible ride console for
+              custom workouts, power targets, heart rate, and your own media.
+            </p>
+            <p>
+              Install the app on a Bike+ you own, set it as the home screen, and
+              start with the built-in workout library. The source is public
+              under the MIT License.
+            </p>
+          </div>
+
+          <div class="more-info-section">
+            <h3>Specs</h3>
+            <table class="specs-table">
+              <tr>
+                <td>Target</td>
+                <td>Peloton Bike+ tablet, tested on Android 10</td>
+              </tr>
+              <tr>
+                <td>Tablet app</td>
+                <td>Kotlin · Jetpack Compose</td>
+              </tr>
+              <tr>
+                <td>Watch app</td>
+                <td>Swift · SwiftUI · watchOS</td>
+              </tr>
+              <tr>
+                <td>Bike link</td>
+                <td>Local tablet service · Bluetooth heart-rate link</td>
+              </tr>
+              <tr>
+                <td>Workouts</td>
+                <td>Built-in plans · JSON · Zwift ZWO</td>
+              </tr>
+              <tr>
+                <td>License</td>
+                <td>MIT</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="more-info-section">
+            <h3>What Mattered</h3>
+            <p>
+              <strong>Local bike control.</strong> Core resistance and sensor
+              communication stay between Pelojack and the Bike+ tablet. Core
+              rides do not depend on a Pelojack server.
+            </p>
+            <p>
+              <strong>A direct Watch path.</strong> Apple Watch sends heart rate
+              to the bike over Bluetooth. The iPhone is used to install the
+              Watch companion, not to relay live ride data.
+            </p>
+            <p>
+              <strong>Opt-in maintenance.</strong> The USB install works without
+              a network server. Restart-persistent updates are a separate option
+              with a token-protected local-network service, described in the
+              setup guide.
+            </p>
+            <p>
+              <strong>Clear limits.</strong> Pelojack is unofficial and depends
+              on an undocumented Bike+ service, which firmware updates may
+              change.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="start">
+      <h2>Make your next ride your own</h2>
+      <p>
+        Read the setup steps, inspect the source, and build Pelojack for your
+        Bike+.
+      </p>
+      <a
+        class="download-btn"
+        href="https://github.com/jackwallner/pelojack#install-on-android"
+        >Open the GitHub repo</a
+      >
+    </section>
+
+    <footer>
+      <div class="divider">
+        &copy; 2026 Jack Wallner · Independent open-source project
+      </div>
+      <div>
+        <a href="https://jackwallner.com">Portfolio</a>
+        <a href="https://github.com/jackwallner/pelojack">Source</a>
+        <a href="privacy.html">Privacy</a>
+      </div>
+    </footer>
+  </body>
+</html>
