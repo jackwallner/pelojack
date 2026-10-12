@@ -6,52 +6,154 @@
     <meta name="theme-color" content="#fafafa" />
     <link rel="icon" type="image/png" href="icon.png" />
     <link rel="apple-touch-icon" href="icon.png" />
-    <title>Pelojack - Your Bike+, your ride</title>
-    <meta
-      name="description"
-      content="Custom workouts, automatic resistance, live ride metrics, and Apple Watch heart rate on the Bike+ you already own."
-    />
+    <title>Peloton Bike+ App, No Peloton Login Needed | Pelojack</title>
+    <meta name="description" content="Unofficial open-source app for the Peloton Bike+: custom workouts, ERG power targets, live ride metrics and Apple Watch heart rate. No Peloton account needed.">
     <link rel="canonical" href="https://jackwallner.com/ios/pelojack/" />
     <meta
       name="keywords"
       content="Pelojack, Peloton Bike+, Bike+ workouts, custom cycling workouts, Apple Watch heart rate, open-source cycling app"
     />
-    <meta property="og:title" content="Pelojack - Your Bike+, your ride" />
-    <meta
-      property="og:description"
-      content="Custom workouts, automatic resistance, live ride metrics, and Apple Watch heart rate on the Bike+ you already own."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://jackwallner.com/ios/pelojack/" />
-    <meta
-      property="og:image"
-      content="https://jackwallner.com/ios/pelojack/icon.png"
-    />
-    <meta property="og:site_name" content="Pelojack" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Pelojack - Your Bike+, your ride" />
-    <meta
-      name="twitter:description"
-      content="Custom workouts, automatic resistance, live ride metrics, and Apple Watch heart rate on the Bike+ you already own."
-    />
-    <meta
-      name="twitter:image"
-      content="https://jackwallner.com/ios/pelojack/icon.png"
-    />
+    <meta property="og:title" content="Peloton Bike+ App, No Peloton Login Needed | Pelojack">
+    <meta property="og:description" content="Custom workouts, automatic resistance, live ride metrics and Apple Watch heart rate on the Bike+ you already own. Open source, MIT, independent of Peloton.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jackwallner.com/ios/pelojack/">
+    <meta property="og:image" content="https://jackwallner.github.io/pelojack/screenshots/workouts.png">
+    <meta property="og:site_name" content="Jack Wallner">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Peloton Bike+ App, No Peloton Login Needed | Pelojack">
+    <meta name="twitter:description" content="Custom workouts, automatic resistance, live ride metrics and Apple Watch heart rate on the Bike+ you already own. Open source, MIT, independent of Peloton.">
+    <meta name="twitter:image" content="https://jackwallner.github.io/pelojack/screenshots/workouts.png">
+    <meta name="robots" content="index, follow, max-image-preview:large">
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "Pelojack",
-        "applicationCategory": "SportsApplication",
-        "operatingSystem": "Android 10+, watchOS 10+",
-        "description": "An open-source Bike+ ride app for custom workouts, live metrics, resistance control, and Apple Watch heart rate.",
-        "url": "https://jackwallner.com/ios/pelojack/",
-        "downloadUrl": "https://github.com/jackwallner/pelojack",
-        "license": "https://opensource.org/license/mit",
-        "isAccessibleForFree": true,
-        "author": { "@type": "Person", "name": "Jack Wallner" }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MobileApplication",
+      "@id": "https://jackwallner.com/ios/pelojack/#app",
+      "name": "Pelojack",
+      "description": "Pelojack is an unofficial, open-source ride app for the Peloton Bike+ tablet, with an Apple Watch companion. It offers custom workouts, ERG power targets, resistance control, live ride metrics and Apple Watch heart rate, and its core rides do not need a Peloton account. It is independent and not made, approved or supported by Peloton.",
+      "applicationCategory": "SportsApplication",
+      "operatingSystem": "Android 10 (Bike+ tablet), watchOS 10 (Apple Watch companion)",
+      "url": "https://jackwallner.com/ios/pelojack/",
+      "downloadUrl": "https://github.com/jackwallner/pelojack",
+      "sameAs": "https://github.com/jackwallner/pelojack",
+      "screenshot": [
+        "https://jackwallner.github.io/pelojack/screenshots/workouts.png",
+        "https://jackwallner.github.io/pelojack/screenshots/live-ride-simulated.png"
+      ],
+      "featureList": [
+        "Built-in, custom and imported workouts (JSON, Zwift ZWO)",
+        "Resistance guided by workout segments and ERG power targets",
+        "Live cadence, power, resistance, speed and distance",
+        "Apple Watch heart rate sent to the bike over Bluetooth",
+        "Local ride history, no Pelojack cloud account",
+        "MIT-licensed source on GitHub"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "license": "https://opensource.org/license/mit",
+      "isAccessibleForFree": true,
+      "author": {
+        "@type": "Person",
+        "name": "Jack Wallner",
+        "url": "https://jackwallner.com/"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Jack Wallner",
+        "url": "https://jackwallner.com/"
       }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is there an open-source app for the Peloton Bike+?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Pelojack is an open-source ride app for the Bike+ tablet, released under the MIT License with its source on GitHub. It runs on the bike's Android tablet and pairs with an Apple Watch companion."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you use a Peloton Bike+ without a subscription?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pelojack's core rides do not need a Peloton account or cloud API, because it controls the bike through the tablet's local bike service. It is an independent project, and Peloton firmware updates can change that service and may break compatibility."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I make custom workouts on a Peloton Bike+?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Pelojack includes a built-in workout library, lets you create a workout on the tablet, and imports compatible JSON or Zwift ZWO files. Structured segments can guide resistance, and ERG mode holds a selected power target."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Apple Watch heart rate work with the Bike+?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The Pelojack Apple Watch app reads your heart rate and sends it directly to the bike over Bluetooth. The iPhone is only used to install the Watch app, and other compatible heart-rate straps can be paired too."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Pelojack made or supported by Peloton?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Pelojack is independent and is not made, approved or supported by Peloton. Peloton and Bike+ are trademarks of Peloton Interactive, Inc."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I install Pelojack on a Bike+?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You enable USB debugging on the bike tablet, connect it to a Mac and run the setup script from the repository. The script builds and installs Pelojack and sets it as the home screen, and a restore script returns the previous home app. Use it only on a bike you own or are authorized to configure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Pelojack collect my ride data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Workout plans and ride history stay on the tablet, and there is no Pelojack cloud account or analytics. Apple Watch can save workouts to Apple Health only when you allow it."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Jack Wallner",
+          "item": "https://jackwallner.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "iOS apps",
+          "item": "https://jackwallner.com/ios/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Pelojack",
+          "item": "https://jackwallner.com/ios/pelojack/"
+        }
+      ]
+    }
+  ]
+}
     </script>
     <style>
       * {
@@ -532,6 +634,16 @@
       .feature-card .label.accent {
         color: #f25c3a;
       }
+    
+        .faq { padding: 64px 24px; background: #fafafa; border-top: 1px solid rgba(0,0,0,0.06); }
+        .faq h2 { font-size: 32px; font-weight: 700; text-align: center; margin-bottom: 32px; color: inherit; }
+        .faq-list { max-width: 720px; margin: 0 auto; }
+        .faq details { border-bottom: 1px solid rgba(0,0,0,0.06); padding: 16px 0; }
+        .faq summary { font-size: 17px; font-weight: 600; cursor: pointer; list-style: none; }
+        .faq summary::-webkit-details-marker { display: none; }
+        .faq summary::after { content: "+"; float: right; color: #6e6e73; font-weight: 400; }
+        .faq details[open] summary::after { content: "\2212"; }
+        .faq details p { font-size: 15px; line-height: 1.6; color: #6e6e73; margin-top: 10px; }
     </style>
   </head>
   <body>
@@ -548,7 +660,7 @@
     </nav>
 
     <section class="hero">
-      <p class="hero-kicker">Open source · MIT</p>
+      <p class="hero-kicker">Open-source Peloton Bike+ app · MIT</p>
       <h1>Your Bike+.<br /><span>Your ride.</span></h1>
       <p class="tagline">
         Custom workouts, automatic resistance, and live metrics on the bike you
@@ -750,6 +862,42 @@
       </div>
     </section>
 
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2>Frequently asked questions</h2>
+            <div class="faq-list">
+                <details>
+                    <summary>Is there an open-source app for the Peloton Bike+?</summary>
+                    <p>Yes. Pelojack is an open-source ride app for the Bike+ tablet, released under the MIT License with its source on GitHub. It runs on the bike's Android tablet and pairs with an Apple Watch companion.</p>
+                </details>
+                <details>
+                    <summary>Can you use a Peloton Bike+ without a subscription?</summary>
+                    <p>Pelojack's core rides do not need a Peloton account or cloud API, because it controls the bike through the tablet's local bike service. It is an independent project, and Peloton firmware updates can change that service and may break compatibility.</p>
+                </details>
+                <details>
+                    <summary>Can I make custom workouts on a Peloton Bike+?</summary>
+                    <p>Yes. Pelojack includes a built-in workout library, lets you create a workout on the tablet, and imports compatible JSON or Zwift ZWO files. Structured segments can guide resistance, and ERG mode holds a selected power target.</p>
+                </details>
+                <details>
+                    <summary>Does Apple Watch heart rate work with the Bike+?</summary>
+                    <p>Yes. The Pelojack Apple Watch app reads your heart rate and sends it directly to the bike over Bluetooth. The iPhone is only used to install the Watch app, and other compatible heart-rate straps can be paired too.</p>
+                </details>
+                <details>
+                    <summary>Is Pelojack made or supported by Peloton?</summary>
+                    <p>No. Pelojack is independent and is not made, approved or supported by Peloton. Peloton and Bike+ are trademarks of Peloton Interactive, Inc.</p>
+                </details>
+                <details>
+                    <summary>How do I install Pelojack on a Bike+?</summary>
+                    <p>You enable USB debugging on the bike tablet, connect it to a Mac and run the setup script from the repository. The script builds and installs Pelojack and sets it as the home screen, and a restore script returns the previous home app. Use it only on a bike you own or are authorized to configure.</p>
+                </details>
+                <details>
+                    <summary>Does Pelojack collect my ride data?</summary>
+                    <p>No. Workout plans and ride history stay on the tablet, and there is no Pelojack cloud account or analytics. Apple Watch can save workouts to Apple Health only when you allow it.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
     <section class="cta" id="start">
       <h2>Make your next ride your own</h2>
       <p>
@@ -769,6 +917,7 @@
       </div>
       <div>
         <a href="https://jackwallner.com">Portfolio</a>
+        <a href="https://jackwallner.com/ios/">More apps by Jack Wallner</a>
         <a href="https://github.com/jackwallner/pelojack">Source</a>
         <a href="privacy.html">Privacy</a>
       </div>
