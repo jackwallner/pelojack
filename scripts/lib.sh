@@ -12,7 +12,7 @@ if ! command -v adb >/dev/null && [[ -x "$ANDROID_HOME/platform-tools/adb" ]]; t
 fi
 command -v adb >/dev/null || { echo "adb not found. Install it with: brew install android-platform-tools" >&2; exit 1; }
 
-build_apk() { (cd "$ROOT/android" && ./gradlew --no-daemon -q assembleDebug); }
+build_apk() { fm-gradle -p "$ROOT/android" -q assembleDebug; }
 
 # The tablet's adb serial: $PELOJACK_SERIAL, or the only attached device that is not an emulator.
 bike_serial() {
