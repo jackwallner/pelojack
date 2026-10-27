@@ -1,0 +1,15 @@
+# Pelojack
+
+> Pelojack is an unofficial, open-source app for the Peloton Bike+: custom workouts, ERG power targets, live ride metrics and Apple Watch heart rate.
+
+## App
+
+- [Peloton Bike+ App, No Peloton Login Needed | Pelojack](https://jackwallner.com/ios/pelojack/index.html.md): Pelojack is an unofficial, open-source app for the Peloton Bike+: custom workouts, ERG power targets, live ride metrics and Apple Watch heart rate.
+
+## Guides
+
+- [Apple Watch Heart Rate on a Peloton Bike+: Your Options](https://jackwallner.com/ios/pelojack/apple-watch-heart-rate-peloton-bike-plus.html.md): Three ways to get Apple Watch heart rate onto a Peloton Bike+: Peloton's One-Tap tracking, a Bluetooth or ANT+ strap, or the open-source Pelojack app.
+
+## Optional
+
+- [Pelojack Privacy](https://jackwallner.com/ios/pelojack/privacy.html.md): Privacy details for Pelojack, an independent open-source Bike+ ride app.
