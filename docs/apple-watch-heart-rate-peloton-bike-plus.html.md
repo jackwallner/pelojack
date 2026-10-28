@@ -6,7 +6,7 @@ Web page: https://jackwallner.com/ios/pelojack/apple-watch-heart-rate-peloton-bi
 
 ## How to use Apple Watch heart rate with a Peloton Bike+
 
-By [Jack Wallner](https://jackwallner.com/) · Last updated October 18, 2026
+By [Jack Wallner](https://jackwallner.com/) · Last updated October 28, 2026
 
 One-Tap Apple Watch Tracking is Peloton's own feature that connects your Apple Watch to a class on the Bike+: set up the Apple Watch option in the Peloton iPhone app, start a class on the Bike+, and tap Connect on the notification that appears on your watch. It requires an All-Access Membership. The Bike+ also accepts Bluetooth and ANT+ heart rate monitors. A third option is Pelojack, an independent open-source app that sends Apple Watch heart rate to the bike's tablet without a Peloton account.
 
