@@ -27,7 +27,7 @@ case "$FILE" in
     install_apks "$FILE"
     ;;
   *.apkm | *.xapk | *.zip)
-    WORK=$(mktemp -d -t pelojack-app)
+    WORK=$(mktemp -d -t pelojack-app.XXXXXX)
     trap 'rm -rf "$WORK"' EXIT
     unzip -q -o "$FILE" '*.apk' -d "$WORK"
     # A bundle carries splits for every ABI and density; the device rejects the ones it cannot use.
