@@ -71,6 +71,8 @@ class RideActions(
     val music: MusicActions,
     val playGame: (() -> Unit)? = null,
     val openCamera: (() -> Unit)? = null,
+    val watchElsewhere: (() -> Unit)? = null,
+    val minimizeToOverlay: (() -> Unit)? = null,
 )
 
 class MusicActions(
@@ -88,6 +90,11 @@ fun RideScreen(state: RideState, actions: RideActions, videoLocation: (Video.Fil
     val playing = !state.paused
     Column(Modifier.fillMaxSize().padding(horizontal = 48.dp, vertical = 36.dp)) {
         TopBar(state, actions)
+        Row(horizontalArrangement = Arrangement.spacedBy(16.dp), verticalAlignment = Alignment.CenterVertically) {
+            actions.minimizeToOverlay?.let { QuietButton("Minimize to overlay", it) }
+            actions.watchElsewhere?.let { QuietButton("Other apps", it) }
+            Text("Keep riding over your Home screen or another app", style = Type.Small)
+        }
         Spacer(Modifier.height(24.dp))
         if (video == null) {
             Row(Modifier.fillMaxWidth().weight(1f), horizontalArrangement = Arrangement.spacedBy(20.dp)) {

@@ -1,0 +1,11 @@
+{
+  "id": "example-easy-spin",
+  "name": "Example easy spin",
+  "description": "Original JSON format example, not a coached workout or training prescription.",
+  "category": "custom",
+  "segments": [
+    {"name": "Begin", "seconds": 90, "ftp": 0.4},
+    {"name": "Easy spin", "seconds": 240, "ftp": 0.5},
+    {"name": "Finish", "seconds": 90, "ftp": 0.35}
+  ]
+}

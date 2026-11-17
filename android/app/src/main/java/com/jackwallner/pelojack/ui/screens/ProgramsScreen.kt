@@ -1,6 +1,11 @@
 package com.jackwallner.pelojack.ui.screens
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.horizontalScroll
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.lifecycle.compose.LifecycleResumeEffect
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -47,10 +52,20 @@ import com.jackwallner.pelojack.workout.Workout
 fun ProgramsScreen(app: PelojackApp, nav: Navigator) {
     val settings by app.settings.state.collectAsStateWithLifecycle()
     val rides by app.rides.rides.collectAsStateWithLifecycle()
-    Page("Programs", subtitle = "Multi-week plans. Ride them in order and track your progress.") {
-        Column(verticalArrangement = Arrangement.spacedBy(24.dp)) {
-            app.library.programs.forEach { program ->
-                val workouts = program.workoutIds.mapNotNull(app.library::find)
+    val programs by app.library.programsState.collectAsStateWithLifecycle()
+    val loadedWorkouts by app.library.workouts.collectAsStateWithLifecycle()
+    val scope = rememberCoroutineScope()
+    LifecycleResumeEffect(app.library) {
+        scope.launch(Dispatchers.IO) { app.library.reload() }
+        onPauseOrDispose { }
+    }
+    Page("Programs", subtitle = "Multi-week plans. Ride them in order and track your progress.", actions = {
+        QuietButton("Reload", { scope.launch(Dispatchers.IO) { app.library.reload() } })
+        PlanImportAction(app)
+    }) {
+        Column(Modifier.weight(1f).verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(24.dp)) {
+            programs.forEach { program ->
+                val workouts = program.workoutIds.mapNotNull { id -> loadedWorkouts.firstOrNull { it.id == id } }
                 val active = settings.programId == program.id
                 val done = programProgress(program, settings, rides)
                 Card(Modifier.fillMaxWidth(), onClick = { nav.push(Route.ProgramDetail(program.id)) }) {
@@ -100,7 +115,9 @@ fun Workout.mainZone(): Int =
 fun ProgramDetailScreen(app: PelojackApp, nav: Navigator, id: String) {
     val settings by app.settings.state.collectAsStateWithLifecycle()
     val rides by app.rides.rides.collectAsStateWithLifecycle()
-    val program: Program = app.library.programs.firstOrNull { it.id == id } ?: run {
+    val programs by app.library.programsState.collectAsStateWithLifecycle()
+    val loadedWorkouts by app.library.workouts.collectAsStateWithLifecycle()
+    val program: Program = programs.firstOrNull { it.id == id } ?: run {
         nav.back()
         return
     }
@@ -135,16 +152,16 @@ fun ProgramDetailScreen(app: PelojackApp, nav: Navigator, id: String) {
             }
         }
         Spacer(Modifier.height(36.dp))
-        Row(Modifier.fillMaxWidth().weight(1f), horizontalArrangement = Arrangement.spacedBy(24.dp)) {
+        Row(Modifier.fillMaxWidth().weight(1f).horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(24.dp)) {
             val firstIndex = program.weeks.runningFold(0) { total, week -> total + week.size }
             program.weeks.forEachIndexed { week, ids ->
-                Card(Modifier.weight(1f).fillMaxHeight()) {
+                Card(Modifier.width(360.dp).fillMaxHeight()) {
                     Text("Week ${week + 1}", style = Type.Heading)
                     Spacer(Modifier.height(20.dp))
                     Column(Modifier.verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(14.dp)) {
                         ids.forEachIndexed { offset, workoutId ->
                             val position = firstIndex[week] + offset
-                            val workout = app.library.find(workoutId) ?: return@forEachIndexed
+                            val workout = loadedWorkouts.firstOrNull { it.id == workoutId } ?: return@forEachIndexed
                             ProgramRide(
                                 workout,
                                 state = when {
