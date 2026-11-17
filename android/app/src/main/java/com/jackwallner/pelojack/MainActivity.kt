@@ -178,6 +178,8 @@ class MainActivity : ComponentActivity() {
                         ),
                         playGame = if (app.game.installed) ({ app.game.play() }) else null,
                         openCamera = app.game::watchCamera,
+                        watchElsewhere = app.game::watchElsewhere,
+                        minimizeToOverlay = app.game::minimizeToOverlay,
                     ),
                     videoLocation = app.library::videoLocation,
                     metric = settings.metric,

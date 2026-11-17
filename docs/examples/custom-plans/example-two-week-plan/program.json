@@ -1,0 +1,7 @@
+{
+  "formatVersion": 1,
+  "id": "example-two-week-plan",
+  "name": "Two-week import example",
+  "description": "An original format demonstration, not a training recommendation. Includes one ZWO workout and one JSON workout. Importing does not join or start the program.",
+  "weeks": [["zwo-example-intervals"], ["example-easy-spin"]]
+}

@@ -41,7 +41,8 @@ scripts/push-workout.sh path/to/workout.json
 ```
 
 You can also create and edit workouts in the app. The workout library is stored on the tablet.
-Optional ride overlays can open other apps already installed on the tablet. To install an app you trust, use `scripts/bike-app.sh path/to/app.apk`. No third-party APKs are included.
+For whole-program JSON/ZIP imports, including an original example bundle, see [Custom program import](docs/custom-program-import.md).
+Optional ride overlays can open other apps already installed on the tablet; see [Workout overlay, compact mode and minimize](docs/workout-overlay.md) for permissions and default-HOME limitations. To install an app you trust, use `scripts/bike-app.sh path/to/app.apk`. No third-party APKs are included.
 
 ## Apple Watch
 
@@ -64,6 +65,10 @@ Android build and unit-test command:
 cd android
 ./gradlew testDebugUnitTest assembleDebug
 ```
+
+Use JDK 17 and configure the Android SDK (`ANDROID_HOME`). On a resource-constrained host, add `--no-daemon --max-workers=2 -Dorg.gradle.parallel=false '-Dorg.gradle.jvmargs=-Xmx1536m -XX:MaxMetaspaceSize=512m -Dfile.encoding=UTF-8' -Pkotlin.compiler.execution.strategy=in-process`. Gradle may use a single-use daemon that exits after the build.
+
+For a contribution, keep the change focused and follow the surrounding Kotlin/Compose style. Include the commands and actual results for tests/builds, distinguish JVM/source-wiring checks from device observations, and disclose skipped checks or existing failures. Do not include generated APKs, signing material, credentials, personal data or local-only verification logs. Use original or explicitly redistributable fixtures and preserve third-party licenses/notices. These development notes do not grant permission to redistribute third-party workouts or media.
 
 To regenerate the iOS project after changing `project.yml` or adding/removing Swift files:
 

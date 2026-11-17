@@ -80,8 +80,10 @@ fun ClassDetailScreen(app: PelojackApp, nav: Navigator, id: String) {
                 Spacer(Modifier.weight(1f))
                 if (workout.custom) {
                     QuietButton("Edit", { nav.push(Route.Builder(id)) }, icon = Glyphs.Edit)
-                    Spacer(Modifier.width(12.dp))
-                    QuietButton("Delete", { confirmDelete = true }, icon = Glyphs.Delete, color = Palette.Bad)
+                    if (app.library.canDelete(workout)) {
+                        Spacer(Modifier.width(12.dp))
+                        QuietButton("Delete", { confirmDelete = true }, icon = Glyphs.Delete, color = Palette.Bad)
+                    }
                 }
             }
             Spacer(Modifier.height(20.dp))
@@ -171,7 +173,7 @@ fun ClassDetailScreen(app: PelojackApp, nav: Navigator, id: String) {
         }
     }
 
-    if (confirmDelete) {
+    if (confirmDelete && app.library.canDelete(workout)) {
         AlertDialog(
             onDismissRequest = { confirmDelete = false },
             title = { Text("Delete ${workout.name}?", style = Type.Heading) },
@@ -179,9 +181,10 @@ fun ClassDetailScreen(app: PelojackApp, nav: Navigator, id: String) {
             confirmButton = {
                 TextButton({
                     confirmDelete = false
-                    app.library.delete(workout)
-                    app.settings.update { it.copy(stack = it.stack - id, bookmarks = it.bookmarks - id) }
-                    nav.back()
+                    if (app.library.delete(workout)) {
+                        app.settings.update { it.copy(stack = it.stack - id, bookmarks = it.bookmarks - id) }
+                        nav.back()
+                    }
                 }) { Text("Delete", style = Type.Body, color = Palette.Bad) }
             },
             dismissButton = { TextButton({ confirmDelete = false }) { Text("Cancel", style = Type.Body) } },

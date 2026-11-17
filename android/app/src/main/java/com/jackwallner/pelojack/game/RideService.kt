@@ -21,7 +21,7 @@ import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 
-/** Keeps the application-owned ride alive while RuneScape or Nanit is in front. */
+/** Keeps the application-owned ride alive while ANY other app is in front. */
 class RideService : Service() {
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.Main.immediate)
     private val app get() = application as PelojackApp
